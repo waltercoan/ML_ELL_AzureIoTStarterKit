@@ -1,0 +1,802 @@
+{
+  "_type": "Map",
+  "_version": "2",
+  "model": {
+    "_type": "Model",
+    "_version": "2",
+    "nodes": [
+    {
+      "_type": "InputNode<float>",
+      "_version": "3",
+      "id":       "1030",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "GroupId",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "input.1"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1000"
+          }
+        }]
+      },
+      "layout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 8],
+        "extent": [1, 1, 8],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [8, 8, 1]
+      }
+    }, 
+    {
+      "_type": "FullyConnectedLayerNode<float>",
+      "_version": "5",
+      "id":       "1031",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "GroupId",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "6"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "op_type",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "FullyConnected"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "id",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "6"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1001"
+          }
+        }]
+      },
+      "input": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1031",
+        "name": "input",
+        "type": 1,
+        "input":         "1030.output"
+      },
+      "inputLayout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 8],
+        "extent": [1, 1, 8],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [8, 8, 1]
+      },
+      "outputLayout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 2, 1],
+        "extent": [1, 2, 1],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [2, 1, 1]
+      },
+      "inputShape": [1, 1, 8],
+      "layer": {
+        "_type": "FullyConnectedLayer<float>",
+        "_version": "0",
+        "inputPaddingScheme": 0,
+        "inputPaddingSize": 0,
+        "outputShape": [1, 2, 1],
+        "outputPaddingScheme": 0,
+        "outputPaddingSize": 0,
+        "weights_rows": 2,
+        "weights_columns": 8,
+        "weights_values": [0.6805708, 1.691493, -0.3320033, 0.07568957, 0.2967719, 1.523974, 1.145412, -0.03737275, -0.1404422, 1.406536, -0.4410545, -1.372251, -1.768321, 1.027472, -0.4984773, -1.156376]
+      }
+    }, 
+    {
+      "_type": "ReinterpretLayoutNode<float>",
+      "_version": "8",
+      "id":       "1032",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1006"
+          }
+        }]
+      },
+      "input": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1032",
+        "name": "input",
+        "type": 1,
+        "input":         "1031.output"
+      },
+      "outputLayout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 2],
+        "extent": [1, 1, 2],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [2, 2, 1]
+      }
+    }, 
+    {
+      "_type": "ConstantNode<float>",
+      "_version": "8",
+      "id":       "1033",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "GroupId",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "2"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1005"
+          }
+        }]
+      },
+      "values": [-1.961337, -1.251302],
+      "layout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [2],
+        "extent": [2],
+        "offset": [0],
+        "order": [0],
+        "increment": [1]
+      }
+    }, 
+    {
+      "_type": "ReinterpretLayoutNode<float>",
+      "_version": "8",
+      "id":       "1034",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1007"
+          }
+        }]
+      },
+      "input": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1034",
+        "name": "input",
+        "type": 1,
+        "input":         "1033.output"
+      },
+      "outputLayout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 2],
+        "extent": [1, 1, 2],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [2, 2, 1]
+      }
+    }, 
+    {
+      "_type": "BinaryOperationNode<float>",
+      "_version": "7",
+      "id":       "1035",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "GroupId",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "7"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "op_type",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "Plus"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "id",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "7"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1008"
+          }
+        }]
+      },
+      "input1": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1035",
+        "name": "input1",
+        "type": 1,
+        "input":         "1032.output"
+      },
+      "input2": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1035",
+        "name": "input2",
+        "type": 1,
+        "input":         "1034.output"
+      },
+      "inputLayout1": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 2],
+        "extent": [1, 1, 2],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [2, 2, 1]
+      },
+      "inputLayout2": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 2],
+        "extent": [1, 1, 2],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [2, 2, 1]
+      },
+      "operation": "add",
+      "outputLayout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 2],
+        "extent": [1, 1, 2],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [2, 2, 1]
+      },
+      "padding": 0
+    }, 
+    {
+      "_type": "UnaryOperationNode<float>",
+      "_version": "3",
+      "id":       "1036",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "GroupId",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "8"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "op_type",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "Tanh"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "id",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "8"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1009"
+          }
+        }]
+      },
+      "input": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1036",
+        "name": "input",
+        "type": 1,
+        "input":         "1035.output"
+      },
+      "operation": "tanh"
+    }, 
+    {
+      "_type": "FullyConnectedLayerNode<float>",
+      "_version": "5",
+      "id":       "1037",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "GroupId",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "10"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "op_type",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "FullyConnected"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "id",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "10"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1010"
+          }
+        }]
+      },
+      "input": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1037",
+        "name": "input",
+        "type": 1,
+        "input":         "1036.output"
+      },
+      "inputLayout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 2, 1],
+        "extent": [1, 2, 1],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [2, 1, 1]
+      },
+      "outputLayout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 1],
+        "extent": [1, 1, 1],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [1, 1, 1]
+      },
+      "inputShape": [1, 2, 1],
+      "layer": {
+        "_type": "FullyConnectedLayer<float>",
+        "_version": "0",
+        "inputPaddingScheme": 0,
+        "inputPaddingSize": 0,
+        "outputShape": [1, 1, 1],
+        "outputPaddingScheme": 0,
+        "outputPaddingSize": 0,
+        "weights_rows": 1,
+        "weights_columns": 2,
+        "weights_values": [5.676132, 0.7520199]
+      }
+    }, 
+    {
+      "_type": "ConstantNode<float>",
+      "_version": "8",
+      "id":       "1038",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "GroupId",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "4"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1003"
+          }
+        }]
+      },
+      "values": [-0.6627805],
+      "layout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1],
+        "extent": [1],
+        "offset": [0],
+        "order": [0],
+        "increment": [1]
+      }
+    }, 
+    {
+      "_type": "ReinterpretLayoutNode<float>",
+      "_version": "8",
+      "id":       "1039",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1011"
+          }
+        }]
+      },
+      "input": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1039",
+        "name": "input",
+        "type": 1,
+        "input":         "1038.output"
+      },
+      "outputLayout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 1],
+        "extent": [1, 1, 1],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [1, 1, 1]
+      }
+    }, 
+    {
+      "_type": "BinaryOperationNode<float>",
+      "_version": "7",
+      "id":       "1040",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "GroupId",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "11"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "op_type",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "Plus"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "id",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "11"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1012"
+          }
+        }]
+      },
+      "input1": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1040",
+        "name": "input1",
+        "type": 1,
+        "input":         "1037.output"
+      },
+      "input2": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1040",
+        "name": "input2",
+        "type": 1,
+        "input":         "1039.output"
+      },
+      "inputLayout1": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 1],
+        "extent": [1, 1, 1],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [1, 1, 1]
+      },
+      "inputLayout2": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 1],
+        "extent": [1, 1, 1],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [1, 1, 1]
+      },
+      "operation": "add",
+      "outputLayout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1, 1, 1],
+        "extent": [1, 1, 1],
+        "offset": [0, 0, 0],
+        "order": [0, 1, 2],
+        "increment": [1, 1, 1]
+      },
+      "padding": 0
+    }, 
+    {
+      "_type": "UnaryOperationNode<float>",
+      "_version": "3",
+      "id":       "1041",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "GroupId",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "12"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "op_type",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "Tanh"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "id",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "12"
+          }
+        }, 
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1013"
+          }
+        }]
+      },
+      "input": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1041",
+        "name": "input",
+        "type": 1,
+        "input":         "1040.output"
+      },
+      "operation": "tanh"
+    }, 
+    {
+      "_type": "OutputNode<float>",
+      "_version": "2",
+      "id":       "1042",
+      "metadata": {
+        "_type": "PropertyBag",
+        "_version": "0",
+        "data": [
+        {
+          "_type": "PropertyBag::KeyValue",
+          "_version": "0",
+          "k": "ancestor",
+          "v": {
+            "_type": "Variant",
+            "_version": "0",
+            "type": "std::string",
+            "value":             "1014"
+          }
+        }]
+      },
+      "input": {
+        "_type": "InputPort<float>",
+        "_version": "0",
+        "nodeId":         "1042",
+        "name": "input",
+        "type": 1,
+        "input":         "1041.output"
+      },
+      "layout": {
+        "_type": "MemoryLayout",
+        "_version": "0",
+        "size": [1],
+        "extent": [1],
+        "offset": [0],
+        "order": [0],
+        "increment": [1]
+      }
+    }]
+  },
+  "inputNames": ["input"],
+  "inputIds": [
+    "1030"],
+  "outputNames": ["output"],
+  "outputElements": [
+    "1042.output"]
+}
